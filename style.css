@@ -1,15 +1,21 @@
 :root {
-  --bg: #FAFAF7;
-  --cream: #F3F1E9;
-  --ink: #1E241C;
-  --ink-soft: #4A5347;
+  --bg: #FBF5E8;
+  --cream: #F1E2BE;
 
-  --leaf: #4C8C5C;
-  --leaf-2: #6FA35E;
-  --leaf-dark: #1E3D2F;
+  --ink: #1A2117;
+  --ink-soft: #4A5443;
 
-  --gold: #E2941F;
-  --gold-dark: #B96F16;
+  --forest: #0E2A1D;
+  --forest-2: #1C4A31;
+  --leaf: #4E9B57;
+  --leaf-2: #7BB65B;
+  --leaf-dark: #0E2A1D;
+
+  --gold: #EFA315;
+  --gold-dark: #B9740A;
+
+  --berry: #C22C3E;
+  --berry-dark: #94202E;
 
   --radius: 14px;
   --max-width: 1120px;
@@ -32,15 +38,15 @@ body {
 
 h1, h2, h3 {
   font-family: var(--font-display);
-  color: var(--leaf-dark);
+  color: var(--forest);
   margin: 0 0 0.4em;
-  line-height: 1.1;
-  font-weight: 600;
+  line-height: 1.08;
+  font-weight: 700;
 }
 
-h1 { font-size: clamp(2.2rem, 4.5vw, 3.4rem); }
-h2 { font-size: clamp(1.7rem, 3vw, 2.3rem); }
-h3 { font-size: 1.3rem; }
+h1 { font-size: clamp(2.4rem, 5vw, 3.8rem); letter-spacing: -0.01em; }
+h2 { font-size: clamp(1.8rem, 3.2vw, 2.5rem); }
+h3 { font-size: 1.3rem; font-weight: 600; }
 
 p { color: var(--ink-soft); }
 
@@ -156,9 +162,9 @@ a { color: inherit; }
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 22px;
+  padding: 13px 24px;
   border-radius: 999px;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.95rem;
   text-decoration: none;
   border: none;
@@ -166,30 +172,38 @@ a { color: inherit; }
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-.btn:hover { transform: translateY(-1px); }
+.btn:hover { transform: translateY(-2px); }
 .btn:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
 
 .btn-primary {
-  background: var(--leaf-dark);
+  background: var(--berry);
   color: #fff;
-  box-shadow: 0 6px 18px rgba(30, 61, 47, 0.25);
+  box-shadow: 0 8px 20px rgba(194, 44, 62, 0.35);
 }
+
+.btn-primary:hover { box-shadow: 0 12px 26px rgba(194, 44, 62, 0.42); }
 
 .btn-ghost {
   background: transparent;
-  color: var(--leaf-dark);
-  border: 1.5px solid rgba(30, 61, 47, 0.25);
+  color: var(--forest);
+  border: 1.5px solid rgba(14, 42, 29, 0.3);
 }
 
-.btn-small { padding: 9px 18px; font-size: 0.88rem; }
-.btn-wide { width: 100%; justify-content: center; padding: 15px; font-size: 1rem; }
+.btn-small { padding: 10px 20px; font-size: 0.88rem; }
+.btn-wide { width: 100%; justify-content: center; padding: 16px; font-size: 1.02rem; }
 
 /* Hero */
 .hero {
   position: relative;
-  overflow: hidden;
-  padding: 64px 0 40px;
+  overflow: visible;
+  padding: 72px 0 64px;
+  background: radial-gradient(120% 140% at 85% 0%, var(--forest-2) 0%, var(--forest) 55%);
+  color: #fff;
 }
+
+.hero .eyebrow { color: var(--gold); }
+
+.hero h1 { color: #fff; }
 
 .hero-inner {
   position: relative;
@@ -201,6 +215,7 @@ a { color: inherit; }
   font-size: 1.08rem;
   max-width: 540px;
   margin-bottom: 1.6em;
+  color: rgba(255, 255, 255, 0.78);
 }
 
 .hero-actions {
@@ -210,20 +225,25 @@ a { color: inherit; }
   margin-bottom: 40px;
 }
 
+.hero .btn-ghost {
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
 .hero-stats {
   display: flex;
   gap: 36px;
   flex-wrap: wrap;
   margin: 0;
   padding-top: 24px;
-  border-top: 1px solid rgba(30, 61, 47, 0.12);
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .hero-stats dt {
   font-size: 0.78rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--gold-dark);
+  color: var(--gold);
   font-weight: 700;
   margin-bottom: 4px;
 }
@@ -231,17 +251,25 @@ a { color: inherit; }
 .hero-stats dd {
   margin: 0;
   font-weight: 600;
-  color: var(--leaf-dark);
+  color: #fff;
 }
 
 .hero-art {
   position: absolute;
-  right: -60px;
+  right: -40px;
   top: 50%;
   transform: translateY(-50%);
   width: 420px;
   height: 420px;
-  opacity: 0.9;
+  opacity: 1;
+}
+
+.hero-divider {
+  display: block;
+  width: 100%;
+  height: 34px;
+  margin-top: -1px;
+  line-height: 0;
 }
 
 @media (max-width: 900px) {
@@ -252,7 +280,9 @@ a { color: inherit; }
 .section { padding: 72px 0; }
 
 .section-dark {
-  background: var(--leaf-dark);
+  background:
+    radial-gradient(circle, rgba(255,255,255,0.08) 1px, transparent 1px) 0 0/22px 22px,
+    radial-gradient(120% 140% at 15% 0%, var(--forest-2) 0%, var(--forest) 60%);
 }
 
 .section-dark p { color: rgba(255,255,255,0.72); }
@@ -267,12 +297,34 @@ a { color: inherit; }
 }
 
 .product-card {
+  position: relative;
+  overflow: hidden;
   background: #fff;
   border-radius: var(--radius);
-  padding: 26px;
-  border: 1px solid rgba(30, 61, 47, 0.08);
-  box-shadow: 0 8px 24px rgba(30, 61, 47, 0.05);
+  padding: 28px 26px 26px;
+  border: 1px solid rgba(14, 42, 29, 0.08);
+  box-shadow: 0 10px 26px rgba(14, 42, 29, 0.07);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 18px 34px rgba(14, 42, 29, 0.13);
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--leaf);
+}
+
+.product-card:nth-child(2)::before { background: var(--gold); }
+.product-card:nth-child(3)::before { background: var(--berry); }
+.product-card:nth-child(4)::before { background: var(--leaf-2); }
 
 .product-photo {
   width: 100%;
@@ -356,8 +408,15 @@ a { color: inherit; }
   background: var(--cream);
   border-radius: var(--radius);
   padding: 24px;
-  border-left: 3px solid var(--gold);
+  border-left: 4px solid var(--gold);
+  transition: transform 0.2s ease;
 }
+
+.benefit-card:hover { transform: translateY(-3px); }
+
+.benefit-grid .benefit-card:nth-child(2) { border-left-color: var(--berry); }
+.benefit-grid .benefit-card:nth-child(3) { border-left-color: var(--leaf); }
+.benefit-grid .benefit-card:nth-child(4) { border-left-color: var(--gold-dark); }
 
 .benefit-card h3 {
   font-size: 1.1rem;
@@ -387,6 +446,21 @@ a { color: inherit; }
 .step {
   border-left: 2px solid var(--gold);
   padding-left: 16px;
+}
+
+.step-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--forest);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin-bottom: 12px;
 }
 
 .step-mark {
