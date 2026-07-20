@@ -60,15 +60,18 @@
         <circle cx="200" cy="200" r="180" fill="var(--cream)"/>
         <g transform="translate(200,205)">
           <path d="M0,-120 C-60,-90 -95,-30 -95,20 C-95,80 -50,125 0,125 C50,125 95,80 95,20 C95,-30 60,-90 0,-120 Z" fill="var(--leaf)"/>
-          <path d="M0,-115 V120" stroke="var(--leaf-dark)" stroke-width="2.5" stroke-linecap="round"/>
-          <path d="M0,-60 L-45,-25 M0,-20 L-60,15 M0,20 L-55,55 M0,-60 L45,-25 M0,-20 L60,15 M0,20 L55,55" stroke="var(--leaf-dark)" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.55"/>
+          <path d="M0,-115 V120" stroke="var(--forest)" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M0,-60 L-45,-25 M0,-20 L-60,15 M0,20 L-55,55 M0,-60 L45,-25 M0,-20 L60,15 M0,20 L55,55" stroke="var(--forest)" stroke-width="1.6" fill="none" stroke-linecap="round" opacity="0.55"/>
         </g>
         <g transform="translate(300,300)">
           <ellipse cx="0" cy="0" rx="26" ry="18" fill="var(--gold)"/>
-          <ellipse cx="34" cy="10" rx="24" ry="16" fill="var(--gold-dark)"/>
+          <ellipse cx="34" cy="10" rx="24" ry="16" fill="var(--berry)"/>
         </g>
       </svg>
     </div>
+    <svg class="hero-divider" viewBox="0 0 1200 34" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,34 L0,14 Q25,34 50,14 Q75,-6 100,14 Q125,34 150,14 Q175,-6 200,14 Q225,34 250,14 Q275,-6 300,14 Q325,34 350,14 Q375,-6 400,14 Q425,34 450,14 Q475,-6 500,14 Q525,34 550,14 Q575,-6 600,14 Q625,34 650,14 Q675,-6 700,14 Q725,34 750,14 Q775,-6 800,14 Q825,34 850,14 Q875,-6 900,14 Q925,34 950,14 Q975,-6 1000,14 Q1025,34 1050,14 Q1075,-6 1100,14 Q1125,34 1150,14 Q1175,-6 1200,14 L1200,34 Z" fill="var(--bg)"/>
+    </svg>
   </section>
 
   <!-- PRODUCTS -->
@@ -104,7 +107,7 @@
 
         <article class="product-card">
           <div class="product-photo">
-            <img src="pumpkin leaf.webp" alt="Fresh fluted pumpkin leaf" loading="lazy">
+            <img src="https://commons.wikimedia.org/wiki/Special:FilePath/Telfairia_occidentalis.jpg?width=500" alt="Fresh fluted pumpkin leaf" loading="lazy">
           </div>
           <h3>Fluted Pumpkin Leaf</h3>
           <p>Tender fluted pumpkin leaf (ugu), picked fresh and sold unwashed — pick over and rinse it your way before cooking.</p>
@@ -116,7 +119,11 @@
 
         <article class="product-card">
           <div class="product-photo product-photo-placeholder" aria-hidden="true">
-            <img src="pumpkin seed.jpg" alt="fresh opened pumpkin seed ready for cooking" loading="lazy">
+            <svg viewBox="0 0 120 120" width="56" height="56">
+              <ellipse cx="45" cy="55" rx="22" ry="16" fill="var(--gold)"/>
+              <ellipse cx="72" cy="65" rx="20" ry="14" fill="var(--gold-dark)"/>
+              <ellipse cx="55" cy="78" rx="17" ry="12" fill="var(--gold)"/>
+            </svg>
           </div>
           <h3>Fluted Pumpkin Seed</h3>
           <p>The large dark-red seed from the fluted pumpkin gourd — sold separately for those who want it on its own.</p>
@@ -170,18 +177,22 @@
       <h2 class="light">From the wash basin to your bag.</h2>
       <div class="steps">
         <div class="step">
+          <span class="step-num">1</span>
           <span class="step-mark">Prepare</span>
           <p>Bitter leaf is washed fresh; scent leaf, pumpkin leaf and pumpkin seed are picked fresh — all ready at Kotu before they travel.</p>
         </div>
         <div class="step">
+          <span class="step-num">2</span>
           <span class="step-mark">Fill the form</span>
           <p>Tell us what you need and where to meet you — the form sends straight to our WhatsApp.</p>
         </div>
         <div class="step">
+          <span class="step-num">3</span>
           <span class="step-mark">We confirm</span>
           <p>We reply on WhatsApp with the price and the time we'll be at Serrekunda market.</p>
         </div>
         <div class="step">
+          <span class="step-num">4</span>
           <span class="step-mark">You collect</span>
           <p>Meet us at market, or arrange a nearby handover — pay when you collect.</p>
         </div>
