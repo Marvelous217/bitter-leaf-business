@@ -401,6 +401,8 @@ a { color: inherit; }
 .step p { color: rgba(255,255,255,0.75); font-size: 0.95rem; }
 
 /* Order form */
+.order-intro { position: sticky; top: 100px; }
+
 .order-wrap {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
@@ -412,8 +414,6 @@ a { color: inherit; }
   .order-wrap { grid-template-columns: 1fr; }
   .order-intro { position: static; }
 }
-
-.order-intro { position: sticky; top: 100px; }
 
 .order-form {
   background: #fff;
