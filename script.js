@@ -1,13 +1,14 @@
 // Footer year
-document.getElementById('year').textContent = new Date().getFullYear();
+var yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 // Dark mode toggle
-const themeToggle = document.getElementById('theme-toggle');
-const rootEl = document.documentElement;
+var themeToggle = document.getElementById('theme-toggle');
+var rootEl = document.documentElement;
 
 if (themeToggle) {
   themeToggle.addEventListener('click', function () {
-    const isDark = rootEl.getAttribute('data-theme') === 'dark';
+    var isDark = rootEl.getAttribute('data-theme') === 'dark';
     if (isDark) {
       rootEl.removeAttribute('data-theme');
       localStorage.setItem('kfg-theme', 'light');
